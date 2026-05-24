@@ -1,0 +1,40 @@
+{
+  "id": "house_facade",
+  "objects": [
+    {
+      "alias": "body",
+      "kind": "polygon",
+      "tags_all": ["wall"],
+      "min_vertices": 4,
+      "max_vertices": 4
+    },
+    {
+      "alias": "roof",
+      "kind": "polygon",
+      "tags_all": ["roof"],
+      "min_vertices": 3,
+      "max_vertices": 3
+    },
+    {
+      "alias": "door",
+      "kind": "polygon",
+      "tags_all": ["door"]
+    }
+  ],
+  "constraints": [
+    {
+      "source": "roof",
+      "relation": "above",
+      "target": "body",
+      "tolerance": 0.5,
+      "min_strength": 0.8
+    },
+    {
+      "source": "door",
+      "relation": "contains_centroid",
+      "target": "body",
+      "tolerance": 1.0,
+      "min_strength": 1.0
+    }
+  ]
+}

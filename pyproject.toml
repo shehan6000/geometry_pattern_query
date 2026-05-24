@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geometry-pattern-query"
+version = "0.1.0"
+description = "A 2D geometry pattern query engine with spatial constraints and ranked matching."
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+gpq = "geometry_pattern_query.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
